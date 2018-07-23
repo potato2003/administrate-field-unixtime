@@ -1,0 +1,34 @@
+<div class="field-unit__label">
+  <%= f.label field.attribute %>
+</div>
+<div class="field-unit__field">
+  <%= f.text_field(
+    field.attribute,
+    value: field.pretty,
+    )
+  %>
+<script>
+  (function() {
+    var inputs = document.querySelectorAll('input')
+    var input = inputs[inputs.length - 1]
+
+    document.addEventListener("DOMContentLoaded", function(evt) {
+
+      var $f = $(input).parents('form');
+      $f.on('submit', function() {
+        var unixtime_val = Date.parse( $(input).val() ) / 1000;
+
+        if (! isNaN(unixtime_val)) {
+          $('<input>').attr({
+            type: 'hidden',
+            name: $(input).attr('name'),
+            value: unixtime_val,
+          }).appendTo($f);
+        }
+
+        $(input).attr('name', null);
+      });
+    })
+  })()
+</script>
+</div>
