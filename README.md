@@ -17,7 +17,7 @@ And then execute:
 In your Dashboard `ATTRIBUTE_TYPES` use the field type `Field::Unixtime`. i.e.
 ```ruby
 ATTRIBUTE_TYPES = {
-  category: Field::Unixtime
+  created_at: Field::Unixtime
 }
 ```
 
