@@ -18,13 +18,11 @@
       $f.on('submit', function() {
         var unixtime_val = Date.parse( $(input).val() ) / 1000;
 
-        if (! isNaN(unixtime_val)) {
-          $('<input>').attr({
-            type: 'hidden',
-            name: $(input).attr('name'),
-            value: unixtime_val,
-          }).appendTo($f);
-        }
+        $('<input>').attr({
+          type: 'hidden',
+          name: $(input).attr('name'),
+          value: isNaN(unixtime_val) ? null : unixtime_val,
+        }).appendTo($f);
 
         $(input).attr('name', null);
       });
