@@ -19,4 +19,3 @@ module Administrate
     end
   end
 end
-Unixtime = Administrate::Field::Unixtime
