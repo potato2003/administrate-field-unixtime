@@ -10,6 +10,7 @@ Gem::Specification.new do |spec|
   spec.summary       = "simple plugin in order to be able to view and edit unixtime as human-editable format within Administrate."
   spec.description   = spec.summary
   spec.homepage      = "https://github.com/potato2003/administrate-field-unixtime"
+  spec.licenses      = ['MIT']
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
