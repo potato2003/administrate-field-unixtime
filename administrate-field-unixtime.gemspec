@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "administrate-field-unixtime"
-  spec.version       = "0.0.2"
+  spec.version       = "0.0.3"
   spec.authors       = ["potato2003"]
   spec.email         = ["potato2003@gmail.com"]
 
@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency 'administrate'
-  spec.add_runtime_dependency 'rails', '>= 5.0', '<= 6.0'
+  spec.add_runtime_dependency 'rails', '>= 5.0'
 
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
